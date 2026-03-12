@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <link href="images/215b41a4b_logo.png" rel="icon" type="image/svg+xml">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://harley-violin-pro.base44.app/manifest.json" rel="manifest">
+  <title>
+   Harley Violinista
+  </title>
+  <script crossorigin="" src="js/index-lfxdRbwE.js" type="module">
+  </script>
+  <link crossorigin="" href="css/index-DNiynwDr.css" rel="stylesheet">
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69a3452512153f314bb682b4";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="Harley Violinista" property="og:title">
+  <meta content="O site oficial de Harley, violinista profissional, dedicado a captar novos alunos e agendar apresentações. Descubra aulas personalizadas, veja resultados inspiradores de alunos e solicite orçamentos para eventos." property="og:description">
+  <meta content="images/215b41a4b_logo_1.png" property="og:image">
+  <meta content="https://harley-violin-pro.base44.app" property="og:url">
+  <meta content="website" property="og:type">
+  <meta content="Harley Violinista" property="og:site_name">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="Harley Violinista" name="twitter:title">
+  <meta content="O site oficial de Harley, violinista profissional, dedicado a captar novos alunos e agendar apresentações. Descubra aulas personalizadas, veja resultados inspiradores de alunos e solicite orçamentos para eventos." name="twitter:description">
+  <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/69a3452512153f314bb682b4/215b41a4b_logo.png?width=1200&height=630&resize=contain" name="twitter:image">
+  <meta content="https://harley-violin-pro.base44.app" name="twitter:url">
+  <meta content="O site oficial de Harley, violinista profissional, dedicado a captar novos alunos e agendar apresentações. Descubra aulas personalizadas, veja resultados inspiradores de alunos e solicite orçamentos para eventos." name="description">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="Harley Violinista" name="apple-mobile-web-app-title">
+  <link href="https://harley-violin-pro.base44.app" rel="canonical">
+  <script async="true" data-app-id="69a3452512153f314bb682b4" data-platform-url="https://app.base44.com" src="js/badge.js">
+  </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1593373095667335');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1593373095667335&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+ </head>
+ <body>
+  <div id="root">
+  </div>
+  
+  <script>
+function enviarConversaoWhats(event) {
+    const PIXEL_ID = '1593373095667335';
+    const TOKEN = 'EAAhE5yaFDfsBQ4Nmuyx3cg8MZChRUTJRZBNOCUTF0K8gixjB2ZB5RDedsGBZBZBaEGn07ZAvP5DwbwGKIkTTpFEfnQEDg6TfGycZAgTlnQy9UTw04SWSwnyoeOwcidWOI9YZBXS5ptiMryQrwuMvkOfHq7HRrAM1q4m2Bkiy4if9URqEkplq58ssSckhjBK2fudkbBK2fudkbQZDZD';
+
+    // 1. Disparo via Navegador (Pixel padrão)
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Contact', { content_name: 'Clique WhatsApp' });
+    }
+
+    // 2. Disparo via API de Conversões (CAPI)
+    fetch(`https://graph.facebook.com${PIXEL_ID}/events?access_token=${TOKEN}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            data: [{
+                event_name: 'Contact',
+                event_time: Math.floor(Date.now() / 1000),
+                action_source: 'website',
+                event_source_url: window.location.href,
+                user_data: {
+                    client_user_agent: navigator.userAgent
+                },
+                custom_data: {
+                    content_name: 'Botao WhatsApp Base44'
+                }
+            }]
+        })
+    })
+    .then(response => console.log('Sinal CAPI enviado com sucesso'))
+    .catch(error => console.error('Erro no envio CAPI:', error));
+}
+
+// attach to any wa.me links automatically
+// this covers dynamically generated links as well
+document.addEventListener('click', function(e) {
+    const target = e.target.closest('a[href^="https://wa.me"]');
+    if (target) {
+        enviarConversaoWhats(e);
+    }
+});
+  </script>
+
+</body></html>
